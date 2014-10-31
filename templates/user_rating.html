@@ -1,0 +1,17 @@
+<html>
+    <body>
+
+        <div>
+
+        	<form action="/movies" class="inline-block">
+        		<h1>Want to rate a new movie? Click here!</h1>
+        		<button class="btn" type='submit'>Rate Movie</button>
+        	</form>
+        </div>
+        <h1>User Ratings</h1>
+        <h2>User ID {{user.id}}, age {{user.age}}</h2>
+        {% for rating in rating_list%}
+            <h3> {{rating.movie.name}}, was rated, <a href="/updaterating/{{rating.movie_id}}">{{rating.rating}}</a> </h3>
+        {% endfor %}
+    </body>
+</html>

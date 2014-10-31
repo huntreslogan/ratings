@@ -1,0 +1,13 @@
+<html>
+	<body>
+		<h1>Add your rating</h1>
+		<form action="/savenew" method="POST">
+			<label for="movie_title">Movie Title</label>
+			<input type="text" value="{{title}}" id="movie_title" name="movie_title" />
+			<input type="hidden" value="{{movie_id}}" id="movie_id" name="movie_id" />
+			<label for="rating">Rating</label>
+			<input type="rating" id="rating" name="rating" />
+			<button class="button" type="submit">Submit</button>
+		</form>
+	</body>
+</html>

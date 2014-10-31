@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <h1>List of Ratings</h1>
+
+        {% for rating in ratings%}
+
+            <h2> Rated by {{rating.user.id}}</h2>
+            {% for i in rating.user.rating %}            
+                <h3> Rating {{rating.id[i]}}</h3>
+            {% endfor %}
+
+
+
+
+        {% endfor %}
+    </body>
+</html>

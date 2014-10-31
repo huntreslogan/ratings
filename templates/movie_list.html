@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block body %}
+        <h1>List of Movies</h1>
+		<table>
+			<tbody>
+        	{% for movie in movie_list %}
+			<tr>
+            <td><a href="/newrating/{{movie.id}}">Movie: {{ movie.name }}</a></td>
+            <td> Release date: {{ movie.released_at.year }}-{{movie.released_at.month}}-{{movie.released_at.day}}</td>
+			</tr>
+			<td><a href="{{movie.imdb_url}}">More info from IMDB</a></td>
+        	{% endfor %}
+        	</tbody>
+    	</table>
+{% endblock %}
